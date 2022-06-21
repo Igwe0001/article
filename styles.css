@@ -18,7 +18,7 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
@@ -290,6 +290,7 @@ svg {
 .attribution {
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 
