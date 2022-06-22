@@ -12,285 +12,273 @@
   --Light-Grayish-Blue: hsl(210, 46%, 95%);
 
   /* Font */
-  --Manrope: 'Manrope', sans-serif;
-
+  --Manrope: "Manrope", sans-serif;
 }
 
 html {
-    font-size: 62.5%;
-    /* overflow: hidden; */
+  font-size: 62.5%;
+  /* overflow: hidden; */
 }
 
 body {
-    background: var(--Light-Grayish-Blue);
-    display: grid;
-    place-items: center;
-    font-family: var(--Manrope);
-    min-height: 100vh;
-    height: 100%;
-    
+  background: var(--Light-Grayish-Blue);
+  display: grid;
+  place-items: center;
+  font-family: var(--Manrope);
+  min-height: 100vh;
+  height: 100%;
 }
 
 .container {
-    height: inherit;
+  /* height: inherit;
     width: 90%;
      width: 90%;
     max-width: 32.7rem;
      height: 75%;
-    max-height: 51.2rem;
-    position: relative;
+    max-height: 51.2rem; */
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .item__container {
-    /* width: 90%;
-    max-width: 32.7rem; */
-    height: 100%;
-    max-height: 51.2rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    /* position: relative; */
-    overflow: hidden;
+  height: 100%;
+  max-height: 51.2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  width: 90%;
+  max-width: 32.7rem;
+  margin: auto;
+  /* position: relative; */
 }
 
 .main-image {
-    height: 40%;
-    max-height: 18.5rem;
-    background-image: url('./images/drawers.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  height: 40%;
+  max-height: 18.5rem;
+  background-image: url("./images/drawers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 100%;
+  min-height: 18rem;
 }
 
 .item__content {
-    margin: 0 auto;
-    display: grid;
-    place-items: center;
-    flex-grow: 1;
-    /* height: 100%; */
-    /* height: inherit; */
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  flex-grow: 1;
+  /* height: 100%; */
+  /* height: inherit; */
 }
 
 .item__main-content {
-    width: 85%;
-    margin: 0 auto;
+ /* width: 85%; */
+  /* margin: 0 auto; */
+  padding: 1.5rem;
 }
 
 .item__text {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .item__text h1 {
-    font-weight: 700;
-    color: var(--Very-Dark-Grayish-Blue);
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
 }
 
 .item__text p {
-    font-size: 1.4rem;
-    color: var(--Desaturated-Dark-Blue);
+  font-size: 1.4rem;
+  color: var(--Desaturated-Dark-Blue);
 }
 
 .item__data {
-    margin-top: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data__container-0 {
-    width: 100%;
-    height: 6.5rem;
-    background-color: var(--Very-Dark-Grayish-Blue);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    bottom: -20%;
-    opacity: 0;
-    visibility: hidden;
-    /* border-bottom: 5px solid #6A0136; */
-    transition: all .3s ease;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  width: 100%;
+  height: 6.5rem;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  bottom: -20%;
+  opacity: 0;
+  visibility: hidden;
+  /* border-bottom: 5px solid #6A0136; */
+  transition: all 0.3s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .data__container-0:after {
-    content:'';
-    position: absolute;
-    left: 0;
-    right: 0;
-    /* bottom: 100%; */
-    top: 100%;
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-top: 12.5px solid var(--Very-Dark-Grayish-Blue);
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    display: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* bottom: 100%; */
+  top: 100%;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid var(--Very-Dark-Grayish-Blue);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  display: none;
 }
 
 .data__active {
-    bottom: 0;
-    opacity: 1;
-    visibility: visible;
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .data-contain {
-    display: flex;
-    align-items: center;
-    width: 80%;
+  display: flex;
+  align-items: center;
+  width: 80%;
 }
 
 .data-contain span {
-    color: var(--Desaturated-Dark-Blue);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .4rem;
+  color: var(--Desaturated-Dark-Blue);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
 }
 
 .contain-images {
-    margin-left: 1.3rem;
+  margin-left: 1.3rem;
 }
 
 .contain-images img {
-    /* width: 3rem;
+  /* width: 3rem;
     height: 3rem; */
-    margin: 0 .7rem;
+  margin: 0 0.7rem;
 }
 
 .data__container-1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .data {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .data__name {
-    margin-left: 2rem;
-} 
+  margin-left: 2rem;
+}
 
 .data__name h3 {
-    color: var(--Very-Dark-Grayish-Blue);
+  color: var(--Very-Dark-Grayish-Blue);
 }
 
 .data__name span {
-    color: var(--Grayish-Blue);
-    font-size: 1.2rem;
+  color: var(--Grayish-Blue);
+  font-size: 1.2rem;
 }
 
 .profile-img {
-    width: 4.0rem;
-    height: 4.0rem;
-    border-radius: 50%;
-    display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: block;
+}
+
+button {
+  /* outline: none; */
+  background-color: var(--Light-Grayish-Blue);
+  border-radius: 50%;
+  padding: 1.5rem 1.5rem;
+  border: none;
 }
 
 .share-button {
-    padding: 1.5rem 1.5rem;
-    background-color: var(--Light-Grayish-Blue);
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 svg {
-    position: absolute;
-    z-index: 1000;
+  position: absolute;
+  z-index: 1000;
 }
 
-
 @media (max-width: 360px) {
+  .item__text {
+    margin-top: 1rem;
+  }
 
-    .item__text {
-        margin-top: 1rem;
-    }
+  .item__text h1 {
+    font-size: 1.3rem;
+  }
 
-    .item__text h1 {
-        font-size: 1.3rem;
-    }
+  .item__text p {
+    font-size: 1.1rem;
+  }
 
-    .item__text p {
-        font-size: 1.1rem;
-    }
-
-    .item__data {
-        margin-top: 2rem;
-    }
+  .item__data {
+    margin-top: 2rem;
+  }
 }
 
 @media (min-width: 992px) {
-    .container {
-        max-width: 73.2rem;
-        height: 28.5rem;
-        flex-direction: row;
-    }
+  .container {
+    max-width: 73.2rem;
+    height: 28.5rem;
+    flex-direction: row;
+  }
 
-    .item__container{
-        max-width: 73.2rem;
-        height: 28.5rem;
-        flex-direction: row;
-    }
+  .item__container {
+    max-width: 73.2rem;
+    height: 28.5rem;
+    flex-direction: row;
+  }
 
-    .main-image {
-        height: initial;
-        max-height: initial;
-        width: 100%;
-    }
+  .main-image {
+    height: initial;
+    max-height: initial;
+    width: 100%;
+  }
 
-    .item__text h1 {
-        font-size: 2.1rem;
-    }
+  .item__text h1 {
+    font-size: 2.1rem;
+  }
 
-    .data__container-0 {
-        width: 23.0rem;
-        height: 5rem;
-        left: 78%;
-        border-radius: 1rem;
-    }
+  .data__container-0 {
+    width: 23rem;
+    height: 5rem;
+    left: 78%;
+    border-radius: 1rem;
+  }
 
-    .data__container-0:after {
-        display: initial;
-    }
+  .data__container-0:after {
+    display: initial;
+  }
 
-    .data__active {
-        bottom: 30%;
-    }
+  .data__active {
+    bottom: 30%;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .attribution {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
-
-
